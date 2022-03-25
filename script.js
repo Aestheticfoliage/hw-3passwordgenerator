@@ -1,5 +1,5 @@
-var upperCase = [
-  "A",
+var upperCase =
+  ("A",
   "B",
   "C",
   "D",
@@ -24,11 +24,10 @@ var upperCase = [
   "W",
   "X",
   "Y",
-  "Z",
-];
+  "Z");
 
-var lowerCase = [
-  "a",
+var lowerCase =
+  ("a",
   "b",
   "c",
   "d",
@@ -53,94 +52,54 @@ var lowerCase = [
   "w",
   "x",
   "y",
-  "z",
-];
+  "z");
 
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numbers = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9");
 
-var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "="];
-var yes = true;
-var no = false;
+var symbols = ("!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "=");
+var yes = "true";
+var no = "false";
 
-var passwordArray = [upperCase,lowerCase,symbols,numbers];
+var passwordArray = [""];
+
 var passwordLength = "";
+// expression one adds selected value to password array if true
+//var expression1 = console.log(yes == this)
 var upperCase = window.prompt(
   "would you like use upper case letters yes or no:"
 );
-alert("" + upperCase);
-// {
-//   if (upperCase === true);
-//   else (confirm.yes);
-//   if (yes)concat(passwordArray[upperCase]);
-//  // if (true) [passwordArray.concat + upperCase];
-// }
-//let result = window.confirm();
+console.log("" + upperCase);
+// var passwordArray = function isequal(upperCase,yes){
+//   if  (upperCase === yes){
+//     console.log(passwordArray['']);
+//     else (upperCase == yes);{console.log ('')}
+//     else (upperCase === no);{
+//       console.log('');
+      
+//     }
+//   }
+
+
 var lowerCase = window.prompt(
   "would you like to use lower case letters yes or no:"
 );
-alert("" + lowerCase);
-// {
-//   if (lowerCase === true);
-//   else(confirm.yes);
-//  // if (true) [passwordArray.concat + lowerCase];
-//  if (yes)concat(passwordArray[lowerCase]);
-
-//   }
-
-//let result = window.confirm()
+console.log("" + lowerCase);
 var numbers = window.prompt("would you like to use numbers yes or no:");
-alert("" + numbers);
-// {
-// if (numbers === true );
-// else (confirm.yes);
-// if (yes)concat(passwordArray[numbers]);
-// //if (true) [passwordArray.concat + numbers];
-// }
-//let result = window.confirm();
+console.log("" + numbers);
+if (lowerCase == yes); 
+
+console.log([passwordArray]);
+
 var symbols = window.prompt("would you like to use symbols yes or no:");
-alert("" + symbols);
-
-{
-  if (upperCase);
-  else console.log;
-  if (yes) concat(passwordArray[upperCase]);
-  if (lowerCase === true);
-  else confirm.yes;
-  // if (true) [passwordArray.concat + lowerCase];
-  if (yes) concat(passwordArray[lowerCase]);
-  if (numbers === true);
-  else confirm.yes;
-  if (yes) concat(passwordArray[numbers]);
-  //if (true) [passwordArray.concat + numbers];
-  if (symbols === true);
-  else confirm.yes;
-  //if (true) [passwordArray.concat + symbols];
-  if (yes) concat(passwordArray[symbols]);
+console.log("" + symbols);
+if (symbols == true) {
+  symbols + [passwordArray];
 }
-
-// let result = window.confirm();
+console.log([passwordArray]);
 var passwordLength = window.prompt(
   "how long would you like your password please choose between 8 and 128 characters"
 );
-alert("" + passwordLength);
-//let result = window.confirm(querySelector.passwordLength)
-// function if(document.getElementById(upperCase == true){
-//function passwordLength(querySelector.passwordLength ){
-
-//}
-// }
-//function querySelector(generateString)
-//if console.log(true)
-
-//<input type="checkbox" id="upperCase" name="accept" value="yes">
-//<label for="accept"> Accept </label>
-//
-
-//function generateString(PasswordArray) {
-// alert("Inside");
-
-//let result = " ";
-//const passwordArray = passwordArray.length;
+console.log("" + passwordLength);
 
 // Assignment Code
 //var generateBtn = document.querySelector("#generate");
