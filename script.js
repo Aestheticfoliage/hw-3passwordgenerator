@@ -60,22 +60,23 @@ var lowerCaseList = [
 var numberList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 //console.log("number", numberList);
 var symbolList = ["!", "@", "#", "$", "%", "^", "&", "*", "_", "-", "+", "="];
-
+// generate password takes the property of add characters and 
 function generatePassword() {
   //Varaiables
 
   var addCharacters = "";
+  // this window prompt asks users for a length to assign to passwordLength
   var passwordLength = window.prompt(
     "how long would you like your password please choose between 8 and 128 characters"
   );
   console.log("" + passwordLength);
-
+// this window asks the user to confirm whether or not they would like to use uppercase letters and then logs they're response
   var upperCase = window.confirm(
     "would you like use upper case letters yes or no:"
   );
   console.log("" + upperCase);
 
-  //Ask to incorrect
+  //checks to make sure the input value is within the required values
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Enter valid number of characters");
     //Ask the user again
@@ -83,11 +84,12 @@ function generatePassword() {
       "how long would you like your password please choose between 8 and 128 characters"
     );
   } else {
+    // if the value referenced in the window.confirm evaluates to true the list of uppercase characters is added to the addCharacters string
     if (upperCase === true) {
       addCharacters = addCharacters + upperCaseList.join("");
     }
     console.log("First Time", addCharacters);
-
+// prompts user with a window.confirm function to confirm whether or not to use lowercase letters if the value returned evaluates as true the list of lowercase characters is added to the addCharacters string
     var lowerCase = window.confirm(
       "would you like to use lower case letters yes or no:"
     );
@@ -95,12 +97,13 @@ function generatePassword() {
     if (lowerCase === true) {
       addCharacters = addCharacters + lowerCaseList.join("");
     }
+    // prompts user with a window.confirm function to confirm whether or not to use numbers if the returned value evaluates to true it is included in the add characters string
     var numbers = window.confirm("would you like to use numbers yes or no:");
     console.log("" + numbers);
     if (numbers === true) {
       addCharacters = addCharacters + numberList.join("");
     }
-
+// prompts user with a window.confirm function to confirm whether or not to use symbols if the returned value evaluates to true it is included in the add characters string
     var symbols = window.confirm("would you like to use symbols yes or no:");
     console.log("" + symbols);
     if (symbols == true) {
@@ -109,7 +112,7 @@ function generatePassword() {
     console.log("Final List of string ", addCharacters);
 
     var result = "";
-    //FOr loop
+    //FOr loop to generate a string based on the length requested by user  consisting of randomized values based on which variables were selected for the addCharacters string
     for (var i = 0; i < passwordLength; i++) {
       //Random char based on the addcharacter list
       var randomNumber = Math.floor(Math.random() * addCharacters.length);
